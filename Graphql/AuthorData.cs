@@ -11,6 +11,18 @@ namespace dotnet_graphql
                 Id = 1,
                 Name = "Andrew Buttigieg"
             });
+            authors.Add(new Author(){
+                Id = 2,
+                Name = "Mark Twain"
+            });
+            authors.Add(new Author(){
+                Id = 3,
+                Name = "Ernest Hemingway"
+            });
+            authors.Add(new Author(){
+                Id = 4,
+                Name = "Jane Austen"
+            });
         }
     }
 }

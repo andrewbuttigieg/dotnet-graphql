@@ -1,3 +1,4 @@
+using System.Linq;
 using GraphQL.Types;
 
 namespace dotnet_graphql{
@@ -17,7 +18,7 @@ namespace dotnet_graphql{
         //     .Include(a => a.Books)
         //     .FirstOrDefault(i => i.Id == id);
         //   return author;
-            return authorData.authors[0];
+            return authorData.authors.FirstOrDefault(x => x.Id == id);
         });
 
       Field<ListGraphType<AuthorType>>(
