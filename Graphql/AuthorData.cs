@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace dotnet_graphql
 {
@@ -23,6 +24,16 @@ namespace dotnet_graphql
                 Id = 4,
                 Name = "Jane Austen"
             });
+        }
+
+        public Author Add(string name)
+        {
+            authors.Add(new Author(){
+                Name = name,
+                Id = authors.Count() + 1
+            });
+
+            return authors.Last();
         }
     }
 }

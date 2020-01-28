@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using GraphQL.Server.Ui.GraphiQL;
 using GraphiQl;
+using GraphQL;
+using GraphQL.Types;
 
 namespace dotnet_graphql
 {
@@ -29,8 +31,19 @@ namespace dotnet_graphql
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<AuthorQuery>();
+            services.AddSingleton<AuthorMutation>();
             services.AddSingleton<AuthorType>();
+            services.AddSingleton<BookType>();
+            //services.AddSingleton<AuthorSchema>();
+            services.AddSingleton<AuthorInputType>();
+            services.AddSingleton<BookInputType>();
             services.AddSingleton<AuthorData>();
+            services.AddScoped<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
+            //services.AddSingleton<ISchema, AuthorSchema>();
+            services.AddSingleton<ISchema>(
+              s => new AuthorSchema(new FuncDependencyResolver(type => (IGraphType)s.GetRequiredService(type))));
+
+            //services.AddSingleton<AuthorSchema>();
             //services.Configure<GraphQLSettings>(Configuration);
         }
 
