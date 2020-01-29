@@ -8,6 +8,7 @@ namespace dotnet_graphql
         {
             Name = "BookInput";
             Field<NonNullGraphType<StringGraphType>>("name");
+            Field<NonNullGraphType<StringGraphType>>("genre");
             
         }
     }
