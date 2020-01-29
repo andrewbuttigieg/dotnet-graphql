@@ -7,14 +7,14 @@ http://localhost:5000/graphiql/?query=mutation%20createAuthor(%24author%3AAuthor
 ## Query example  
 http://localhost:5000/graphiql/?query=%7B%0Aauthors%7B%0A%20%20id%0A%20%20name%0A%20%20books%7B%0A%20%20%20%20name%0A%20%20%20%20%0A%20%20%7D%0A%7D%7D
 
-> mutation createAuthor($author:AuthorInput!){
-	createAuthor(author: $author)
-  {
-    id
-    name
-    books {
-      id
-      name
-    }
-  }
-}
+> mutation createAuthor($author:AuthorInput!){  
+	createAuthor(author: $author)  
+  {  
+    id  
+    name  
+    books {  
+      id  
+      name  
+    }  
+  }  
+}  
