@@ -26,11 +26,12 @@ namespace dotnet_graphql
             });
         }
 
-        public Author Add(string name)
+        public Author Add(Author author)
         {
             authors.Add(new Author(){
-                Name = name,
-                Id = authors.Count() + 1
+                Name = author.Name,
+                Id = authors.Count() + 1,
+                Books = author.Books
             });
 
             return authors.Last();

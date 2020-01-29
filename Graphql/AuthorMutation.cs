@@ -13,8 +13,8 @@ namespace dotnet_graphql
                 ),
                 resolve: context =>
                 {
-                    var author = context.GetArgument<AuthorInputType>("author");
-                    return authorData.Add(author.Name);
+                    var author = context.GetArgument<Author>("author");
+                    return authorData.Add(author);
                 }
             );
         }
