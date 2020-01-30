@@ -1,4 +1,7 @@
 # Dotnet example of a Graphql server  
+
+## Status  
+![.NET Core](https://github.com/andrewbuttigieg/dotnet-graphql/workflows/.NET%20Core/badge.svg)  
 ## To run  
 cd to repo and run `dotnet run`  
 ## Mutation example  
