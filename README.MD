@@ -23,7 +23,7 @@ Variables
 > {  
   "author": {  
     "name": "Boba Fett",  
-    "books": [{"name": "lala", "genre":"Romance"}]  
+    "books": [{"name": "Alice in Wonderland", "genre":"Romance"}]  
   }  
 }  
 
