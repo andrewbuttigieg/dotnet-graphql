@@ -29,3 +29,6 @@ Variables
 
 ## Query example  
 https://dotnet-graphql.herokuapp.com/graphiql/?query=%7B%0Aauthors%7B%0A%20%20id%0A%20%20name%0A%20%20books%7B%0A%20%20%20%20name%0A%20%20%20%20%0A%20%20%7D%0A%7D%7D  
+
+## How I setup my build automation  
+Read about it here: https://medium.com/@andrewbuttigieg/writing-a-net-application-in-github-with-automatic-build-and-deploy-to-heroku-all-for-free-399fbf300c6c
